@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script src="./dist/appAuth.js"></script>
+    <script>
+      window.onload = function () {
+        appAuth.AuthorizationServiceConfiguration.fetchFromIssuer(
+          "https://demo.identityserver.io/",
+          new appAuth.FetchRequestor()
+        ).then(function (response) {
+          console.log(response);
+        });
+      };
+    </script>
+  </body>
+</html>
